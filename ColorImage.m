@@ -3,11 +3,11 @@ clc
 clear
 indimgs = [1:5];
 i = 1; id = indimgs(i);
-pic_name = ['ColorImage/', num2str(id), '.tiff'];
+pic_name = ['Data/', num2str(id), '.tiff'];
 I = double(imread(pic_name));
 X = I / 255;
 
-%% Ñù±¾ÂÊ
+%% Ã‘Ã¹Â±Â¾Ã‚ÃŠ
 sr = 0.3;
 Omega = find(rand(numel(X), 1) < sr);
 H = zeros(size(X)); H(Omega) = X(Omega); %imshow(H) imwrite(H,'11.tiff');
